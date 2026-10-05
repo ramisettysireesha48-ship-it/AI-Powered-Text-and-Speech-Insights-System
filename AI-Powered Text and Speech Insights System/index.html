@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI-Powered Text & Speech Insights</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">AI</div>
+            <div>
+                <h2>InsightAI</h2>
+                <span>Text & Speech Analytics</span>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#analyzer">Analyzer</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </div>
+
+        <a href="#analyzer" class="nav-button">
+            Try Analyzer
+        </a>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                ✨ AI-Powered Analysis Platform
+            </div>
+
+            <h1>
+                Understand Your
+                <span>Text & Voice</span>
+                Better
+            </h1>
+
+            <p>
+                Analyze text and speech using intelligent insights.
+                Discover sentiment, keywords, emotions and important
+                information from your content.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#analyzer" class="primary-btn">
+                    Start Analyzing →
+                </a>
+
+                <a href="#features" class="secondary-btn">
+                    Explore Features
+                </a>
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>AI</strong>
+                    <span>Powered</span>
+                </div>
+
+                <div>
+                    <strong>2+</strong>
+                    <span>Analysis Modes</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Browser Based</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="floating-card card-one">
+                😊 Positive
+                <strong>86%</strong>
+            </div>
+
+            <div class="ai-circle">
+                <div class="ai-inner">
+                    AI
+                </div>
+            </div>
+
+            <div class="floating-card card-two">
+                🔑 Keywords
+                <strong>12</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Analyzer Section -->
+    <section class="analyzer-section" id="analyzer">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                SMART ANALYZER
+            </div>
+
+            <h2>
+                Analyze Your Content
+            </h2>
+
+            <p>
+                Enter text manually or use your microphone to convert
+                speech into text and analyze it.
+            </p>
+
+        </div>
+
+
+        <div class="analyzer-container">
+
+            <!-- Input Card -->
+            <div class="input-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Content Input</h3>
+                        <p>Enter or speak your content</p>
+                    </div>
+
+                    <div class="status">
+                        ● Ready
+                    </div>
+
+                </div>
+
+
+                <textarea
+                    id="textInput"
+                    placeholder="Type your text here... For example: I really enjoyed this amazing product. The service was excellent and the experience was wonderful."
+                ></textarea>
+
+
+                <div class="input-actions">
+
+                    <button id="micBtn" class="mic-button">
+                        🎤 Start Speaking
+                    </button>
+
+                    <button id="clearBtn" class="clear-button">
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <div class="text-info">
+
+                    <span>
+                        Characters:
+                        <strong id="charCount">0</strong>
+                    </span>
+
+                    <span>
+                        Words:
+                        <strong id="wordCount">0</strong>
+                    </span>
+
+                </div>
+
+
+                <button id="analyzeBtn" class="analyze-button">
+                    ✨ Analyze Content
+                </button>
+
+            </div>
+
+
+            <!-- Results Card -->
+            <div class="results-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>AI Insights</h3>
+                        <p>Analysis results appear here</p>
+                    </div>
+
+                    <div class="ai-status">
+                        AI
+                    </div>
+
+                </div>
+
+
+                <div class="result-grid">
+
+                    <div class="result-box">
+                        <span class="result-icon">😊</span>
+                        <small>Sentiment</small>
+                        <h3 id="sentiment">--</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <span class="result-icon">🎭</span>
+                        <small>Emotion</small>
+                        <h3 id="emotion">--</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <span class="result-icon">🔤</span>
+                        <small>Words</small>
+                        <h3 id="resultWords">0</h3>
+                    </div>
+
+                    <div class="result-box">
+                        <span class="result-icon">📊</span>
+                        <small>Score</small>
+                        <h3 id="score">--</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="keywords-section">
+
+                    <h4>🔑 Important Keywords</h4>
+
+                    <div id="keywords" class="keywords">
+                        <span class="keyword-placeholder">
+                            Analyze your content to see keywords
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="insight-message">
+
+                    <div class="message-icon">
+                        💡
+                    </div>
+
+                    <div>
+                        <strong>AI Summary</strong>
+
+                        <p id="summary">
+                            Your analysis summary will appear here.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features-section" id="features">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                POWERFUL FEATURES
+            </div>
+
+            <h2>
+                Intelligent Insights
+            </h2>
+
+            <p>
+                Explore different ways our system can understand
+                your text and speech.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon purple">
+                    📝
+                </div>
+
+                <h3>Text Analysis</h3>
+
+                <p>
+                    Analyze written content and identify important
+                    information from your text.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon blue">
+                    🎤
+                </div>
+
+                <h3>Speech Recognition</h3>
+
+                <p>
+                    Convert your voice into text using browser-based
+                    speech recognition.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon pink">
+                    😊
+                </div>
+
+                <h3>Sentiment Detection</h3>
+
+                <p>
+                    Identify whether the overall content is positive,
+                    negative or neutral.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon orange">
+                    🔑
+                </div>
+
+                <h3>Keyword Extraction</h3>
+
+                <p>
+                    Find frequently occurring and meaningful words
+                    from the submitted content.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about-section" id="about">
+
+        <div class="about-content">
+
+            <div class="small-title">
+                ABOUT THE PROJECT
+            </div>
+
+            <h2>
+                Making Text & Speech
+                <span>Understandable</span>
+            </h2>
+
+            <p>
+                AI-Powered Text and Speech Insights System is a smart
+                web application designed to analyze human language.
+                Users can enter text or speak through a microphone,
+                and the system provides useful insights such as
+                sentiment, emotion, word count and keywords.
+            </p>
+
+            <div class="about-points">
+
+                <div>
+                    ✓ Easy to use
+                </div>
+
+                <div>
+                    ✓ Fast analysis
+                </div>
+
+                <div>
+                    ✓ Responsive design
+                </div>
+
+                <div>
+                    ✓ Speech recognition
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="about-visual">
+
+            <div class="visual-circle">
+                <span>AI</span>
+            </div>
+
+            <div class="visual-text">
+                <strong>Smart Analysis</strong>
+                <p>Text • Voice • Sentiment • Keywords</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            <div class="logo-icon">AI</div>
+            <h3>InsightAI</h3>
+        </div>
+
+        <p>
+            AI-Powered Text and Speech Insights System
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            © 2026 InsightAI. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
